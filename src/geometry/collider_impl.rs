@@ -176,7 +176,9 @@ impl Collider {
 
         match collider_shape {
             ComputedColliderShape::TriMesh => Some(
-                SharedShape::trimesh_with_flags(vtx, idx, TriMeshFlags::MERGE_DUPLICATE_VERTICES)
+                // SharedShape::trimesh_with_flags(vtx, idx, TriMeshFlags::MERGE_DUPLICATE_VERTICES)
+                //     .into(),
+                SharedShape::trimesh_with_flags(vtx, idx, TriMeshFlags::MERGE_DUPLICATE_VERTICES | TriMeshFlags::FIX_INTERNAL_EDGES)
                     .into(),
             ),
             ComputedColliderShape::ConvexHull => {
