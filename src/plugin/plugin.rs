@@ -190,6 +190,8 @@ where
                     dt: 1.0 / 120.0,
                     joint_natural_frequency: 1e6 * 2.0,
                     joint_damping_ratio: 0.5,
+                    contact_damping_ratio: 2.5,
+                    contact_natural_frequency: 60.0,
                     ..Default::default()
                 },
                 ..Default::default()
