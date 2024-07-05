@@ -187,6 +187,7 @@ where
             .insert_resource(RapierContext {
                 integration_parameters: IntegrationParameters {
                     length_unit: self.length_unit,
+                    dt: 1.0 / 120.0,
                     ..Default::default()
                 },
                 ..Default::default()
